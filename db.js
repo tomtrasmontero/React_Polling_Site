@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 
 const conn = new Sequelize(process.env.DATABASE_URL);
+let connHolder;
 
 const User = conn.define('user', {
   name: {
